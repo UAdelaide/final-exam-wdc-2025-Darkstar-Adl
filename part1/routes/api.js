@@ -1,4 +1,5 @@
 var express = require('express');
+const pool = require('../db');
 var router = express.Router();
 
 /* /api/dogs
@@ -21,7 +22,9 @@ Sample Response:
 ]
 */
 router.get('/dogs', function(req, res, next) {
-  const r
+  const [rows] = await pool.query(`
+    
+    `);
 });
 
 module.exports = router;
