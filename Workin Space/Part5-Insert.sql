@@ -1,4 +1,6 @@
 -- v1 20/06 4pm (untested, TODO: test)
+-- v2 20/06 6pm (untested, TODO: test)
+
 
 INSERT INTO users (username, email, password_hash, role) VALUES
 ("alice123", "alice@example.com", "hashed123", "owner"),
