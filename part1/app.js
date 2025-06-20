@@ -53,7 +53,7 @@ let db;
       )
     `);
 
-    // Insert data if table is empty
+    // Populate tables
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
       await db.execute(`
