@@ -40,7 +40,6 @@ let db;
 
     // Create db if doesn't exist
     console.log("[DB] creating/resetting db: ", process.env.DB_NAME, " the nconnecting and adding tables");
-    // console.log("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
     await connection.query(await fs.readFile(path.join(__dirname, "Part5-Tables.sql"), "utf8"));
 
     console.log("[DB] insertign rows into db");
