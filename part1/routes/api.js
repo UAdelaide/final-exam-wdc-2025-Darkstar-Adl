@@ -30,7 +30,7 @@ router.get('/dogs', async function(req, res, next) {
     res.json(rows);
 });
 
-/* api/walkrequests/open
+/* /api/walkrequests/open
 
 Return all open walk requests,
 including the dog name, requested time, location, and owner's username.
@@ -58,7 +58,8 @@ router.get('/walkrequests/open', async function(req, res, next) {
     res.json(rows);
 });
 
-
+/*
+*/
 router.get('/walkrequests/open', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT w.request_id, d.name AS dog_name, w.requested_time, w.duration_minutes, w.location, u.username AS owner_username
