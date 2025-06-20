@@ -25,27 +25,12 @@ Sample Response:
 router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
-        FROM Dogs AS d
-        JOIN Users AS u ON Dogs.owner_id = Users.user_id
+        FROM dogs AS d
+        JOIN users AS u ON dogs.owner_id = users.user_id
         ;
     `);
     res.json(rows);
 });
 
-// catch 404 and forward to error handler
-router.use(function(req, res, next) {
-  next(createError(404));
-});
-
-// error handler
-router.use(function(err, req, res, next) {
-  // set locals, only providing error in development
-  res.locals.message = err.message;
-  res.locals.error = req.app.get('env') === 'development' ? err : {};
-
-  // render the error page
-  res.status(err.status || 500);
-  res.render('error');
-});
 
 module.exports = router;
