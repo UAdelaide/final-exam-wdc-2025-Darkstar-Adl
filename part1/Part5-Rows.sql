@@ -19,5 +19,5 @@ INSERT INTO WalkRequests (dog_id, requested_time, duration_minutes, location, st
 ((SELECT dog_id FROM Dogs WHERE name = "Max"), "2025-06-10 08:00:00", 30, "Parklands", "open"),
 ((SELECT dog_id FROM Dogs WHERE name = "Bella"), "2025-06-10 09:30:00", 45, "Beachside Ave", "accepted"),
 ((SELECT dog_id FROM Dogs WHERE name = "Scooby"), "2025-06-20 08:30:00", 45, "Starting Strong Ave", "accepted"),
-((SELECT dog_id FROM Dogs WHERE name = "Knine"), "2025-06-21 01:30:00", 60, "Middle St", "open"),
+((SELECT dog_id FROM Dogs WHERE name = "Knine"), "2025-06-21 01:30:00", 60, "Middle of Madness St", "open"),
 ((SELECT dog_id FROM Dogs WHERE name = "Maxwell"), "2025-06-21 16:30:00", 30, "Final Stretch Blvd", "open");
