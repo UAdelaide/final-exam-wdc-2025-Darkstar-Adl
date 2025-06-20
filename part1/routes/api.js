@@ -58,12 +58,11 @@ router.get('/walkrequests/open', async function(req, res, next) {
     res.json(rows);
 });
 
-/*/api/walkers/summary
+/* /api/walkers/summary
 
 Return a summary of each walker with their average rating and number of completed walks.
 
 Sample Response:
-
 [
   {
     "walker_username": "bobwalker",
