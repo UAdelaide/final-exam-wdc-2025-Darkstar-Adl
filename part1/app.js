@@ -33,10 +33,11 @@ let db;
     const connection = await mysql.createConnection({
       host: process.env.DB_HOST,
       user: process.env.DB_USER,
-      password: ''
+      password: process.env.DB_PASSWORD
     });
 
     // Create db if doesn't exist
+    console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
     await connection.query('DROP DATABASE IF EXISTS $;', process.env.DB_NAME);
     await connection.query('CREATE DATABASE IF NOT EXISTS $ ', process.env.DB_NAME);
     await connection.end();
