@@ -33,7 +33,8 @@ router.get('/dogs', async function(req, res, next) {
 
 /* api/walkrequests/open
 
-Return all open walk requests, including the dog name, requested time, location, and owner's username.
+Return all open walk requests,
+including the dog name, requested time, location, and owner's username.
 
 Sample Response:
 
