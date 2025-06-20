@@ -40,17 +40,7 @@ let db;
 
     // Create db if doesn't exist
     console.log("[DB] creating/resetting db: ", process.env.DB_NAME, " the nconnecting and adding tables");
-    // await connection.query(`
-    //   DROP DATABASE IF EXISTS ${process.env.DB_NAME} ;
-    //   CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME} ;
-    // `);
-
-    console.log("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
-    // // Connect to db
-    // await connection.changeUser({ database: process.env.DB_NAME });
-
-    console.log("[DB] creating tables in db");
-    // Create tables that doent already exist
+    // console.log("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
     await connection.query(await fs.readFile(path.join(__dirname, "Part5-Tables.sql"), "utf8"));
 
     console.log("[DB] insertign rows into db");
