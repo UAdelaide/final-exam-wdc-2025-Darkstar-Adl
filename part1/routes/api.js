@@ -77,7 +77,7 @@ router.get('/walkers/summary', async function(req, res, next) {
         SELECT u.username AS walker_username, AS total_ratings, AS average_rating, AS completed_walks
         FROM WalkRequests AS w
         JOIN Users AS u ON d.owner_id = u.user_id
-        JOIN WalkRatings AS r ON d.owner_id = u.user_id
+        JOIN WalkRatings AS r ON w.walker_id = u.user_id
         ;
     `);
     res.json(rows);
