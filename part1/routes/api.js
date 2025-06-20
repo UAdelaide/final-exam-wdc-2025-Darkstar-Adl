@@ -23,7 +23,8 @@ Sample Response:
 */
 router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
-        se
+        SELECT *
+        FROM Dogs;
     `);
 });
 
