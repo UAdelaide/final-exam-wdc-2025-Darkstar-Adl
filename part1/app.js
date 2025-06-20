@@ -25,7 +25,7 @@ let db;
 
 (async () => {
   try {
-    // Connect to MySQL without specifying a database
+    // Connect without db, and no password
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
