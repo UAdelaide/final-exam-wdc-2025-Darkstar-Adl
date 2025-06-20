@@ -1,5 +1,4 @@
-INSERT INTO users (username, email, password_hash, role)
-('alice123', 'alice@example.com', 'hashed123', 'owner'),
+INSERT INTO users (username, email, password_hash, role) ('alice123', 'alice@example.com', 'hashed123', 'owner'),
 ('bobwalker', 'bob@example.com', 'hashed456', 'walker'),
 ('carol123', 'carol@example.com', 'hashed789', 'owner'),
 ('exampasser123', 'passing@exam.com', 'hashed98', 'walker'),
@@ -13,8 +12,3 @@ INSERT INTO dogs (name, size, owner_id)
 ('Maxwell', 'medium', (SELECT id FROM users WHERE username = 'exampasser123')),
 
 INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, status)
-((SELECT id FROM dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
-((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
-((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
