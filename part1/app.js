@@ -44,7 +44,7 @@ let db;
       database: 'testdb'
     });
 
-    // Create tables that doent already exist
+    // Create a table if it doesn't exist
     await db.execute(`
       CREATE TABLE IF NOT EXISTS books (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -53,7 +53,7 @@ let db;
       )
     `);
 
-    // Populate tables
+    // Insert data if table is empty
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
       await db.execute(`
@@ -64,7 +64,7 @@ let db;
       `);
     }
   } catch (err) {
-    console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
+    console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
   }
 })();
 
