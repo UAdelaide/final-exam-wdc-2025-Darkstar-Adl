@@ -53,7 +53,7 @@ let db;
 
     console.error("[DB] insertign rows into db");
     // Create tables that doent already exist
-    await db.execute(`
+    await db.query(`
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
