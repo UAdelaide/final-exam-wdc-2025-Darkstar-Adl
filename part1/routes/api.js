@@ -1,3 +1,4 @@
+var createError = require('http-errors');
 const express = require('express');
 const pool = require('../db.js');
 const router = express.Router();
@@ -32,7 +33,7 @@ router.get('/dogs', async function(req, res, next) {
 });
 
 // catch 404 and forward to error handler
-app.use(function(req, res, next) {
+router.use(function(req, res, next) {
   next(createError(404));
 });
 
