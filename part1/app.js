@@ -42,7 +42,7 @@ let db;
     await connection.query('CREATE DATABASE IF NOT EXISTS $ ', process.env.DB_NAME);
     await connection.end();
 
-    console.error("[DB] creating/resetting db");
+    console.error("[DB] inserting rows");
     // Connect to db
     db = await mysql.createConnection({
       host: process.env.DB_HOST,
