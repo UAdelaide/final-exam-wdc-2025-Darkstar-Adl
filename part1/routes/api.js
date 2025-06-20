@@ -21,9 +21,9 @@ Sample Response:
   }
 ]
 */
-router.get('/dogs', function(req, res, next) {
+router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
-    
+
     `);
 });
 
