@@ -7,7 +7,6 @@ const router = express.Router();
 Return a list of all dogs with their size and owner's username.
 
 Sample Response:
-
 [
   {
     "dog_name": "Max",
@@ -37,7 +36,6 @@ Return all open walk requests,
 including the dog name, requested time, location, and owner's username.
 
 Sample Response:
-
 [
   {
     "request_id": 1,
@@ -49,5 +47,14 @@ Sample Response:
   }
 ]
 */
+router.get('/dogs', async function(req, res, next) {
+  const [rows] = await pool.query(`
+        SELECT d.name AS dog_name, d.size, u.username AS owner_username
+        FROM Dogs AS d
+        JOIN Users AS u ON d.owner_id = u.user_id
+        ;
+    `);
+    res.json(rows);
+});
 
 module.exports = router;
