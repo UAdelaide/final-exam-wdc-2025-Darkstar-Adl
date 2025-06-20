@@ -3,9 +3,7 @@ const pool = require('../db.js');
 const router = express.Router();
 
 /* /api/dogs
-
 Return a list of all dogs with their size and owner's username.
-
 Sample Response:
 [
   {
