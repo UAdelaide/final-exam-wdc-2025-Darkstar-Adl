@@ -26,6 +26,7 @@ router.get('/dogs', async function(req, res, next) {
         SELECT *
         FROM Dogs;
     `);
+    
 });
 
 module.exports = router;
