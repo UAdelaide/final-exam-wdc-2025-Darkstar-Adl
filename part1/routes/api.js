@@ -31,10 +31,8 @@ router.get('/dogs', async function(req, res, next) {
 });
 
 /* /api/walkrequests/open
-
 Return all open walk requests,
 including the dog name, requested time, location, and owner's username.
-
 Sample Response:
 [
   {
@@ -59,9 +57,7 @@ router.get('/walkrequests/open', async function(req, res, next) {
 });
 
 /* /api/walkers/summary
-
 Return a summary of each walker with their average rating and number of completed walks.
-
 Sample Response:
 [
   {
@@ -78,7 +74,7 @@ Sample Response:
   }
 ]
 */
-router.get('/walkrequests/open', async function(req, res, next) {
+router.get('/walkers/summary', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT w.request_id, d.name AS dog_name, w.requested_time, w.duration_minutes, w.location, u.username AS owner_username
         FROM WalkRequests AS w
