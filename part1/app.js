@@ -31,8 +31,8 @@ let db;
   try {
     // Connect without db, and no password
     const connection = await mysql.createConnection({
-      host: 'localhost',
-      user: 'root',
+      host: process.env.DB_HOST,
+      user: process.env.DB_USER,
       password: ''
     });
 
