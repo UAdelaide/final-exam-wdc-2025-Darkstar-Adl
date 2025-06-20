@@ -64,7 +64,7 @@ let db;
       `);
     }
   } catch (err) {
-    console.error('There was an error in db init. Mysql should be running: service mysql start', err);
+    console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
   }
 })();
 
