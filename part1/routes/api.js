@@ -1,5 +1,5 @@
 var express = require('express');
-const pool = require('../db');
+const pool = require('../db.js');
 var router = express.Router();
 
 /* /api/dogs
