@@ -55,7 +55,7 @@ let db;
 
     console.log("[DB] insertign rows into db");
     // Populate tables
-    await connection.query(await fs.readFile(path.join(__dirname, "Part5-Insert.sql"), "utf8"));
+    await connection.query(await fs.readFile(path.join(__dirname, "Part5-Rows.sql"), "utf8"));
 
     await connection.end();
 
