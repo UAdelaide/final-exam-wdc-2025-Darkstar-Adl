@@ -1,7 +1,7 @@
 const mysql = require('mysql2/promise');
 require('dotenv').config();
 
-// Create pool of connetions to db
+// Create pool of db connetions
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
@@ -9,5 +9,4 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME
 });
 
-// access to the connection pool
 module.exports = pool;
