@@ -78,7 +78,8 @@ router.get('/walkers/summary', async function(req, res, next) {
             COUNT(rt.rating_id) AS total_ratings,
             AVG(rt.rating) AS average_rating,
             COUNT(CASE WHEN rq.status = "completed" THEN 1 END) AS completed_walks
-        FROM Users AS u
+        WHERE u.role = 'walker'
+        FROM Users AS u 
         LEFT JOIN WalkRatings AS rt ON rt.walker_id = u.user_id
         LEFT JOIN WalkRequests AS rq ON rq.request_id = rt.walker_id
         GROUP BY u.user_id
