@@ -29,14 +29,14 @@ let db;
     const connection = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
-      password: '' // Set your MySQL root password
+      password: ''
     });
 
-    // Create the database if it doesn't exist
+    // Create db if doesn't exist
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
-    // Connect to the created database
+    // Connect to db
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
