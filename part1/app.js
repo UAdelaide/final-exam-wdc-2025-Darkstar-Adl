@@ -128,6 +128,8 @@ INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, s
 ((SELECT user_id FROM dogs WHERE name = "Maxwell"), "2025-06-21 16:30:00", 30, "Final Blvd", "open");
     `);
 
+    await connection.end();
+
   } catch (err) {
     console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
   }
