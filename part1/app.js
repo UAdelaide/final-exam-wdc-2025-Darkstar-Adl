@@ -41,7 +41,6 @@ let db;
     console.log("[DB] creating/resetting db: ", process.env.DB_NAME);
     await connection.query(`DROP DATABASE IF EXISTS ${process.env.DB_NAME} ;`);
     await connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME} ;`);
-    await connection.end();
 
     console.log("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
     // Connect to db
