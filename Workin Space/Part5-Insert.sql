@@ -10,10 +10,10 @@ INSERT INTO users (username, email, password_hash, role) VALUES
 
 INSERT INTO dogs (name, size, owner_id) VALUES
 ("Max", "medium", (SELECT id FROM Users WHERE username = "alice123")),
-("Bella", "small", (SELECT id FROM users WHERE username = "carol123")),
-("Scooby", "large", (SELECT id FROM users WHERE username = "examsuccess99")),
-("Knine", "small", (SELECT id FROM users WHERE username = "examsuccess99")),
-("Maxwell", "medium", (SELECT id FROM users WHERE username = "exampasser123"));
+("Bella", "small", (SELECT id FROM Users WHERE username = "carol123")),
+("Scooby", "large", (SELECT id FROM Users WHERE username = "examsuccess99")),
+("Knine", "small", (SELECT id FROM Users WHERE username = "examsuccess99")),
+("Maxwell", "medium", (SELECT id FROM Users WHERE username = "exampasser123"));
 
 INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, status) VALUES
 ((SELECT user_id FROM Dogs WHERE name = "Max"), "2025-06-10 08:00:00", 30, "Parklands", "open"),
