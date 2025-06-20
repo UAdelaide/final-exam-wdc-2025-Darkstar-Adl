@@ -126,8 +126,7 @@ INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, s
 ((SELECT id FROM dogs WHERE name = "Scooby"), "2025-06-20 08:30:00", 45, "Starting Ave", "accepted"),
 ((SELECT id FROM dogs WHERE name = "Knine"), "2025-06-21 01:30:00", 60, "Middle St", "open"),
 ((SELECT id FROM dogs WHERE name = "Maxwell"), "2025-06-21 16:30:00", 30, "Final Blvd", "open");
-      `);
-    }
+    `);
   } catch (err) {
     console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
   }
