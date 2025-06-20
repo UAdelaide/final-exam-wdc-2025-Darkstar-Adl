@@ -37,7 +37,7 @@ let db;
     });
 
     // Create db if doesn't exist
-    console.error("[DB] creating/resetting db");
+    console.error("[DB] creating/resetting db:", process.env.DB_NAME);
     await connection.query('DROP DATABASE IF EXISTS $;', process.env.DB_NAME);
     await connection.query('CREATE DATABASE IF NOT EXISTS $ ', process.env.DB_NAME);
     await connection.end();
