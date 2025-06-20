@@ -42,7 +42,7 @@ let db;
     await connection.query('CREATE DATABASE IF NOT EXISTS $ ', process.env.DB_NAME);
     await connection.end();
 
-    console.error("[DB] connecting to db using: ");
+    console.error("[DB] connecting to db using: (", process.env.DB_NAME, " ", process.env.DB_NAME, ")");
     // Connect to db
     db = await mysql.createConnection({
       host: process.env.DB_HOST,
