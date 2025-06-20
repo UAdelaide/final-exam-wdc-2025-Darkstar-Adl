@@ -1,7 +1,7 @@
 DROP DATABASE IF EXISTS DogWalkService;
 CREATE DATABASE DogWalkService;
 USE DogWalkService;
-CREATE TABLE Users (
+CREATE TABLE users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
     email VARCHAR(100) UNIQUE NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE Users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
-CREATE TABLE Dogs (
+CREATE TABLE dogs (
     dog_id INT AUTO_INCREMENT PRIMARY KEY,
     owner_id INT NOT NULL,
     name VARCHAR(50) NOT NULL,
@@ -18,7 +18,7 @@ CREATE TABLE Dogs (
     FOREIGN KEY (owner_id) REFERENCES Users(user_id)
 );
 
-CREATE TABLE WalkRequests (
+CREATE TABLE walk_requests (
     request_id INT AUTO_INCREMENT PRIMARY KEY,
     dog_id INT NOT NULL,
     requested_time DATETIME NOT NULL,
