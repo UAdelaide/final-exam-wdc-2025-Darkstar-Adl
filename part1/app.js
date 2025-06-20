@@ -48,7 +48,7 @@ let db;
     // Connect to db
     await connection.changeUser({ database: process.env.DB_NAME });
 
-    console.log("[DB] adding rows into db");
+    console.log("[DB] creating tables in db");
     // Create tables that doent already exist
     await connection.query(`
 CREATE TABLE Users (
