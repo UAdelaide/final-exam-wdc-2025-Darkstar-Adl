@@ -39,7 +39,7 @@ let db;
     });
 
     // Create db if doesn't exist
-    console.log("[DB] creating/resetting db: ", process.env.DB_NAME);
+    console.log("[DB] creating/resetting db: ", process.env.DB_NAME, " the nconnecting and adding tables");
     // await connection.query(`
     //   DROP DATABASE IF EXISTS ${process.env.DB_NAME} ;
     //   CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME} ;
