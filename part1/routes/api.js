@@ -75,11 +75,11 @@ Sample Response:
 router.get('/walkers/summary', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT u.username AS walker_username,
-            COUNT(ra.rating_id) AS total_ratings,
+            COUNT(rt.rating_id) AS total_ratings,
             AVG(ra.rating) AS average_rating,
             COUNT(re.request_id) AS completed_walks
         FROM Users AS u
-        LEFT JOIN WalkRequests AS rq ON re.request_id = ra.walker_id AND re.status = "completed"
+        LEFT JOIN WalkRequests AS rq ON re.request_id = rt.walker_id AND rq.status = "completed"
         LEFT JOIN WalkRatings AS rt ON ra.walker_id = u.user_id
         ;
     `);
