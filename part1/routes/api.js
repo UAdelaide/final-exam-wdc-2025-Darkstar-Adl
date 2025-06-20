@@ -24,7 +24,9 @@ Sample Response:
 router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT dog_id, owner_id, name, size
-        FROM Dogs;
+        FROM Dogs
+        JOIN 
+        ;
     `);
     res.json()
 });
