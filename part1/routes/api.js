@@ -58,7 +58,26 @@ router.get('/walkrequests/open', async function(req, res, next) {
     res.json(rows);
 });
 
-/*
+/*/api/walkers/summary
+
+Return a summary of each walker with their average rating and number of completed walks.
+
+Sample Response:
+
+[
+  {
+    "walker_username": "bobwalker",
+    "total_ratings": 2,
+    "average_rating": 4.5,
+    "completed_walks": 2
+  },
+  {
+    "walker_username": "newwalker",
+    "total_ratings": 0,
+    "average_rating": null,
+    "completed_walks": 0
+  }
+]
 */
 router.get('/walkrequests/open', async function(req, res, next) {
   const [rows] = await pool.query(`
