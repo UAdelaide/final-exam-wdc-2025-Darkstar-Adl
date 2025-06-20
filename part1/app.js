@@ -7,6 +7,7 @@ var mysql = require('mysql2/promise');
 
 
 var indexRouter = require('./routes/index');
+var apiRouter = require('./routes/api');
 var usersRouter = require('./routes/users');
 
 var app = express();
