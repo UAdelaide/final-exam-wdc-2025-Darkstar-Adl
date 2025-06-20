@@ -74,7 +74,7 @@ Sample Response:
 */
 router.get('/walkers/summary', async function(req, res, next) {
   const [rows] = await pool.query(`
-        SELECT u.username AS walker_username, AS 
+        SELECT u.username AS walker_username, AS total_ratings, AS average_rating, as 
         FROM WalkRequests AS
         JOIN Dogs AS d ON d.owner_id = w.dog_id
         JOIN Users AS u ON d.owner_id = u.user_id
