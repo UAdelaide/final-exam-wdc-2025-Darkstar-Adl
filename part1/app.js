@@ -51,7 +51,7 @@ let db;
 
     console.log("[DB] creating tables in db");
     // Create tables that doent already exist
-    await connection.query(await fs.readFile(path.join(__dirname, ""), "utf8"));
+    await connection.query(await fs.readFile(path.join(__dirname, "dogwa"), "utf8"));
 
     console.log("[DB] insertign rows into db");
     // Populate tables
