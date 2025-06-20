@@ -11,3 +11,10 @@ INSERT INTO dogs (name, size, owner_id)
 ('Scooby', 'large', (SELECT id FROM users WHERE username = 'examsuccess99')),
 ('Knine', 'small', (SELECT id FROM users WHERE username = 'examsuccess99')),
 ('Maxwell', 'medium', (SELECT id FROM users WHERE username = 'exampasser123')),
+
+INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, status)
+((SELECT id FROM dogs WHERE name = 'Max'), '2025-06-10 08:00:00', 30, 'Parklands', 'open'),
+((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
+((SELECT id FROM dogs WHERE name = 'Bella'), '2025-06-10 09:30:00', 45, 'Beachside Ave', 'accepted'),
