@@ -45,16 +45,11 @@ let db;
 
     console.log("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
     // Connect to db
-    db = await mysql.createConnection({
-      host: process.env.DB_HOST,
-      user: process.env.DB_USER,
-      password: process.env.DB_PASSWORD,
-      database: process.env.DB_NAME
-    });
+    await connection.changeUser({ database: process.env.DB_NAME });
 
     console.log("[DB] insertign rows into db");
     // Create tables that doent already exist
-    await db.query(`
+    await connection.query(`
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
