@@ -38,7 +38,7 @@ let db;
       multipleStatements: true
     });
 
-    // Create db if doesn't exist
+    // Create db and tables if doesn't exist, reset if do
     console.log("[DB] creating/resetting db: ", process.env.DB_NAME, " the nconnecting and adding tables");
     await connection.query(await fs.readFile(path.join(__dirname, "Part5-Tables.sql"), "utf8"));
 
