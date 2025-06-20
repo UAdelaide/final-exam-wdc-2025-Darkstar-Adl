@@ -37,11 +37,12 @@ let db;
     });
 
     // Create db if doesn't exist
-    console.error("[DB] creating db");
+    console.error("[DB] creating/resetting db");
     await connection.query('DROP DATABASE IF EXISTS $;', process.env.DB_NAME);
     await connection.query('CREATE DATABASE IF NOT EXISTS $ ', process.env.DB_NAME);
     await connection.end();
 
+    console.error("[DB] creating/resetting db");
     // Connect to db
     db = await mysql.createConnection({
       host: process.env.DB_HOST,
