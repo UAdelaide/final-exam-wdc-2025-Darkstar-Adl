@@ -26,8 +26,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 
-let db;
-
 (async () => {
   try {
     // Connect without db, and no password
