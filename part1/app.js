@@ -5,6 +5,7 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var mysql = require('mysql2/promise');
 require('dotenv').config();
+var fs = require('fs').promises;
 
 
 var indexRouter = require('./routes/index');
