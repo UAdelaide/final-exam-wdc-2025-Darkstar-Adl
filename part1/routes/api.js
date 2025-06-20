@@ -81,6 +81,7 @@ router.get('/walkers/summary', async function(req, res, next) {
         FROM Users AS u
         JOIN WalkRequests AS re
         JOIN WalkRatings AS ra
+        GROUP BY u.user_id
         ;
     `);
     res.json(rows);
