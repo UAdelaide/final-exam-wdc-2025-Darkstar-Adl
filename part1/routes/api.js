@@ -23,7 +23,7 @@ Sample Response:
 */
 router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
-        SELECT d.dog_id, u.owner_id, d.name, size
+        SELECT d.name, d.dog_id, u.owner_id, , d.size
         FROM Dogs AS d
         JOIN Users AS u ON Dogs.owner_id = Users.user_id
         ;
