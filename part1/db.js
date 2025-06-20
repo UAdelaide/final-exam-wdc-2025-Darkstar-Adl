@@ -8,6 +8,3 @@ const pool = mysql.createPool({
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME
 });
-
-// access to the connection pool
-module.exports = pool;
