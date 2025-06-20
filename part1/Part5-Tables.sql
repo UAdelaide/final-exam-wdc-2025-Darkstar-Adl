@@ -1,6 +1,6 @@
-DROP DATABASE IF EXISTS DogWalkService;
-CREATE DATABASE DogWalkService;
-USE DogWalkService;
+DROP DATABASE IF EXISTS DogWalkService2;
+CREATE DATABASE DogWalkService2;
+USE DogWalkService2;
 CREATE TABLE Users (
     user_id INT AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50) UNIQUE NOT NULL,
