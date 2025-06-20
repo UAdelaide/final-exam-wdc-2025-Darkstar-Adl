@@ -9,9 +9,9 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ("examsuccess99", "winning@exam.com", "hashed99", "owner");
 
 INSERT INTO Dogs (name, size, owner_id) VALUES
-("Max", "medium", (SELECT user_id FROM Users WHERE username = "alice123")),
-("Bella", "small", (SELECT user_id FROM Users WHERE username = "carol123")),
-("Scooby", "large", (SELECT user_id FROM Users WHERE username = "examsuccess99")),
+("Max", "medium", (SELECT dog_id FROM Users WHERE username = "alice123")),
+("Bella", "small", (SELECT dog_id FROM Users WHERE username = "carol123")),
+("Scooby", "large", (SELECT dog_id FROM Users WHERE username = "examsuccess99")),
 ("Knine", "small", (SELECT user_id FROM Users WHERE username = "examsuccess99")),
 ("Maxwell", "medium", (SELECT user_id FROM Users WHERE username = "exampasser123"));
 
