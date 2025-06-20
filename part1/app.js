@@ -107,7 +107,7 @@ CREATE TABLE WalkRatings (
 
     console.log("[DB] insertign rows into db");
     // Populate tables
-    await db.query(`
+    await connection.query(`
 INSERT INTO users (username, email, password_hash, role) VALUES
 ("alice123", "alice@example.com", "hashed123", "owner"),
 ("bobwalker", "bob@example.com", "hashed456", "walker"),
