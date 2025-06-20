@@ -48,7 +48,7 @@ let db;
     // Connect to db
     await connection.changeUser({ database: process.env.DB_NAME });
 
-    console.log("[DB] insertign rows into db");
+    console.log("[DB] adding rows into db");
     // Create tables that doent already exist
     await connection.query(`
 CREATE TABLE Users (
@@ -105,6 +105,7 @@ CREATE TABLE WalkRatings (
 );
     `);
 
+    console.log("[DB] insertign rows into db");
     // Populate tables
     await db.execute(`
 INSERT INTO users (username, email, password_hash, role) VALUES
