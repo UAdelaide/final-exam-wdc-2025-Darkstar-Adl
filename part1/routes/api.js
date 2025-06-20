@@ -1,6 +1,6 @@
-var express = require('express');
+const express = require('express');
 const pool = require('../db.js');
-var router = express.Router();
+const router = express.Router();
 
 /* /api/dogs
 
@@ -23,7 +23,7 @@ Sample Response:
 */
 router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
-
+        se
     `);
 });
 
