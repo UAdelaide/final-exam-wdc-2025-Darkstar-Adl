@@ -36,7 +36,7 @@ let db;
     await connection.query('CREATE DATABASE IF NOT EXISTS testdb');
     await connection.end();
 
-    // Now connect to the created database
+    // Connect to the created database
     db = await mysql.createConnection({
       host: 'localhost',
       user: 'root',
@@ -44,7 +44,7 @@ let db;
       database: 'testdb'
     });
 
-    // Create a table if it doesn't exist
+    // Create tables that doent already exist
     await db.execute(`
       CREATE TABLE IF NOT EXISTS books (
         id INT AUTO_INCREMENT PRIMARY KEY,
@@ -53,7 +53,7 @@ let db;
       )
     `);
 
-    // Insert data if table is empty
+    // Populate tables
     const [rows] = await db.execute('SELECT COUNT(*) AS count FROM books');
     if (rows[0].count === 0) {
       await db.execute(`
@@ -64,7 +64,7 @@ let db;
       `);
     }
   } catch (err) {
-    console.error('Error setting up database. Ensure Mysql is running: service mysql start', err);
+    console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
   }
 })();
 
