@@ -50,10 +50,11 @@ Sample Response:
 router.get('/walkrequests/open', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
-        FROM Dogs AS d
-        JOIN Users AS u ON d.owner_id = u.user_id
-        JOIN WalkRequests AS w ON d.owner_id = u.user_id
+        FROM WalkRequests AS w
         JOIN Dogs AS wd ON wd.owner_id = w.dog_id
+        JOIN Users AS u ON d.owner_id = u.user_id
+        JOIN Dogs AS wd ON wd.owner_id = w.dog_id
+
         ;
     `);
     res.json(rows);
