@@ -21,7 +21,7 @@ Sample Response:
 ]
 */
 router.get('/dogs', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  const r
 });
 
 module.exports = router;
