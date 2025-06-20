@@ -46,7 +46,7 @@ let db;
       host: 'localhost',
       user: 'root',
       password: '',
-      database: 'DogWalkService2'
+      database: process.env.DB_NAME
     });
 
     // Create tables that doent already exist
