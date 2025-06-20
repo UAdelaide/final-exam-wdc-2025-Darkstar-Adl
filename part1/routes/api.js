@@ -80,7 +80,7 @@ router.get('/walkers/summary', async function(req, res, next) {
             COUNT(re) AS completed_walks
         FROM Users AS u
         LEFT JOIN WalkRequests AS re ON re.request_id = ra.walker_id AND re.status = "completed"
-        LEFT JOIN WalkRatings AS ra ON
+        LEFT JOIN WalkRatings AS ra ON ra.walker_id
         GROUP BY u.user_id
         ;
     `);
