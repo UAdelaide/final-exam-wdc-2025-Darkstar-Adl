@@ -51,7 +51,7 @@ let db;
       database: process.env.DB_NAME
     });
 
-    console.error("[DB] ");
+    console.error("[DB] insertign rows into db");
     // Create tables that doent already exist
     await db.execute(`
 CREATE TABLE Users (
