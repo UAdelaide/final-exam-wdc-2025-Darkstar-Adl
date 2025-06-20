@@ -37,7 +37,7 @@ app.use(express.static(path.join(__dirname, 'public')));
     });
 
     // Create db and tables if doesn't exist, reset if do
-    console.log("[DB] creating/resetting db: ", process.env.DB_NAME, " then connecting and adding tables");
+    console.log("[DB] creating/resetting db \n", process.env.DB_NAME, " then connecting to db and adding tables");
     await connection.query(await fs.readFile(path.join(__dirname, "Part5-Tables.sql"), "utf8"));
 
     console.log("[DB] insertign rows into db");
