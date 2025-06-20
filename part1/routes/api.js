@@ -31,4 +31,9 @@ router.get('/dogs', async function(req, res, next) {
     res.json(rows);
 });
 
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
 module.exports = router;
