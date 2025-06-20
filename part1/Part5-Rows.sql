@@ -8,7 +8,7 @@ INSERT INTO Users (username, email, password_hash, role) VALUES
 ("exampasser123", "passing@exam.com", "hashed98", "walker"),
 ("examsuccess99", "winning@exam.com", "hashed99", "owner");
 
-INSERT INTO dogs (name, size, owner_id) VALUES
+INSERT INTO Dogs (name, size, owner_id) VALUES
 ("Max", "medium", (SELECT id FROM Users WHERE username = "alice123")),
 ("Bella", "small", (SELECT id FROM Users WHERE username = "carol123")),
 ("Scooby", "large", (SELECT id FROM Users WHERE username = "examsuccess99")),
