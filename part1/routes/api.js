@@ -74,7 +74,7 @@ Sample Response:
 */
 router.get('/walkers/summary', async function(req, res, next) {
   const [rows] = await pool.query(`
-        SELECT u.username AS walker_username, COUNT(SELECT * from ) AS total_ratings, AS average_rating, AS completed_walks
+        SELECT u.username AS walker_username, COUNT() AS total_ratings, AS average_rating, AS completed_walks
         FROM WalkRequests AS w
         JOIN Users AS u ON d.owner_id = u.user_id
         JOIN WalkRatings AS r ON w.walker_id = u.user_id
