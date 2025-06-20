@@ -81,6 +81,7 @@ router.get('/walkers/summary', async function(req, res, next) {
         FROM Users AS u
         LEFT JOIN WalkRatings AS rt ON rt.walker_id = u.user_id
         LEFT JOIN WalkRequests AS rq ON rq.request_id = rt.walker_id
+        
         ;
     `);
     res.json(rows);
