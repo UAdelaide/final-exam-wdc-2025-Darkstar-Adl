@@ -44,7 +44,7 @@ let db;
       database: 'testdb'
     });
 
-    // Create a table if it doesn't exist
+    // Create dog walking tables taht doent already exist
     await db.execute(`
       CREATE TABLE IF NOT EXISTS books (
         id INT AUTO_INCREMENT PRIMARY KEY,
