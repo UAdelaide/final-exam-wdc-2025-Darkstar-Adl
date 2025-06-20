@@ -38,12 +38,12 @@ let db;
     });
 
     // Create db if doesn't exist
-    console.error("[DB] creating/resetting db: ", process.env.DB_NAME);
+    console.log("[DB] creating/resetting db: ", process.env.DB_NAME);
     await connection.query(`DROP DATABASE IF EXISTS ${process.env.DB_NAME} ;`);
     await connection.query(`CREATE DATABASE IF NOT EXISTS ${process.env.DB_NAME} ;`);
     await connection.end();
 
-    console.error("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
+    console.log("[DB] connecting to db using: (", process.env.DB_HOST, process.env.DB_USER, process.env.DB_PASSWORD, ")");
     // Connect to db
     db = await mysql.createConnection({
       host: process.env.DB_HOST,
@@ -52,7 +52,7 @@ let db;
       database: process.env.DB_NAME
     });
 
-    console.error("[DB] insertign rows into db");
+    console.log("[DB] insertign rows into db");
     // Create tables that doent already exist
     await db.query(`
 CREATE TABLE Users (
