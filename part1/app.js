@@ -136,6 +136,7 @@ INSERT INTO walk_requests (dog_id, requested_time, duration_minutes, location, s
 
 
 app.use('/', indexRouter);
+app.use('/api', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
