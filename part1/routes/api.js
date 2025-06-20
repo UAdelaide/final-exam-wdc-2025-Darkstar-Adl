@@ -23,7 +23,10 @@ Sample Response:
 */
 router.get('/dogs', async function(req, res, next) {
   const [rows] = await pool.query(`
-        SELECT *
+        SELECT dog_id INT AUTO_INCREMENT PRIMARY KEY,
+    owner_id INT NOT NULL,
+    name VARCHAR(50) NOT NULL,
+    size
         FROM Dogs;
     `);
     res.json()
