@@ -53,7 +53,6 @@ router.get('/walkrequests/open', async function(req, res, next) {
         FROM WalkRequests AS w
         JOIN Dogs AS dw ON wd.owner_id = w.dog_id
         JOIN Users AS u ON d.owner_id = u.user_id
-        JOIN Dogs AS uw ON ud.owner_id = w.dog_id
         ;
     `);
     res.json(rows);
