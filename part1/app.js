@@ -46,6 +46,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 
     await connection.end();
 
+    console.log("[DB] db");
+
   } catch (err) {
     console.error('There was an error in db init. Mysql might not have been started try: service mysql start', err);
   }
