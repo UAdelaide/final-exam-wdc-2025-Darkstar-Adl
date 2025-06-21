@@ -36,8 +36,7 @@
 
     <script>
         var app = Vue.createApp({
-            el: "#app",
-            data: {
+            data() {
                 today_dog_url: "",
                 load_date: new Date(),
                 clicked_status: "has not been pressed..."
