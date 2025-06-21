@@ -46,7 +46,7 @@
             },
             methods: {
                 getDog() {
-                    async function fetchDog() {
+                    var fetchDog() = as {
                         let dog_res = await fetch("https://dog.ceo/api/breeds/image/random");
                         let dog_data = await dog_res.json();
                         this.today_dog_url = await dog_data.message;
