@@ -55,6 +55,10 @@
         submit(){
           this.username = document.getElementById("username").value;
           this.password = document.getElementById("password").value;
+
+          let xhttp = new XMLHttpRequest();
+          xhttp.withCredentials = true;
+
         }
       }
     }).mount('#app');
