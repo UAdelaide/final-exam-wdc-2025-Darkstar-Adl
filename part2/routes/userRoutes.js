@@ -47,10 +47,11 @@ router.post('/login', async (req, res) => {
       WHERE email = ? AND password_hash = ?
     `, [username, password]);
 
-    console.log("[Login] Found: ", );
+    console.log("[Login] Found: ", rows);
 
     if (rows.length === 0) {
       return res.status(401).json({ error: 'Invalid credentials' });
+      console.log("[Login] Checking user login info");
     }
 
     res.json({ message: 'Login successful', user: rows[0] }); // user.role is role
