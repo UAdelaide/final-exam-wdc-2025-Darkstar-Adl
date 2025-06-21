@@ -12,7 +12,7 @@
         <img :src="today_dog_url">
         <h1>THE DOG PAGE</h1>
         <p> time is:  {{ load_date }} </p>
-        <p> dog button  {{ load_date }} </p>
+        <p> dog button {{ clicked_status }} </p>
         <button onclick="getDog">Dog!</button>
     </div>
 
@@ -21,7 +21,8 @@
             el: "#app",
             data: {
                 today_dog_url: "",
-                load_date: new Date()
+                load_date: new Date(),
+                clicked_status = "has not been pressed"
             },
             methods: {
                 getDog: function() {
