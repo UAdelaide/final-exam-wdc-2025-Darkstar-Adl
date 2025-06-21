@@ -61,11 +61,9 @@ router.post('/login', async (req, res) => {
   }
 });
 
-// POST login
-router.post('/login', async (req, res) => {
+// POST logout
+router.post('/logout', async (req, res) => {
   const { username, password } = req.body;
-
-  console.log("[Login] Checking user login info");
 
   try {
     const [rows] = await db.query(`
