@@ -81,6 +81,7 @@ Sample Response:
 ]
 */
 app.get('/api/dogs', async function(req, res, next) {
+  // 
   const [rows] = await pool.query(`
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
         FROM Dogs AS d
@@ -105,7 +106,7 @@ Sample Response:
   }
 ]
 */
-router.get('/walkrequests/open', async function(req, res, next) {
+router.get('/api/walkrequests/open', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT w.request_id, d.name AS dog_name, w.requested_time, w.duration_minutes, w.location, u.username AS owner_username
         FROM WalkRequests AS w
@@ -134,7 +135,7 @@ Sample Response:
   }
 ]
 */
-router.get('/walkers/summary', async function(req, res, next) {
+router.get('/api/walkers/summary', async function(req, res, next) {
   const [rows] = await pool.query(`
         SELECT u.username AS walker_username,
             COUNT(rt.rating_id) AS total_ratings,
