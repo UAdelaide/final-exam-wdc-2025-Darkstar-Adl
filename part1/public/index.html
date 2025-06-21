@@ -43,7 +43,7 @@
                 clicked_status: "has not been pressed..."
             },
             methods: {
-                getDog: function() {
+                getDog() {
                     let xhttp = new XMLHttpRequest();
                     xhttp.open("GET", "https://dog.ceo/api/breeds/image/random");
                     xhttp.send();
