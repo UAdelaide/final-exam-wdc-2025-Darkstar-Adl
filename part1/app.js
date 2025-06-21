@@ -57,7 +57,7 @@ var pool = require('../db.js');
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/api', apiRouter); // 
+// app.use('/api', apiRouter); // I moved these routes to the API becasue taht fits the task desc
 
 
 
