@@ -51,13 +51,13 @@ app.use(express.static(path.join(__dirname, 'public')));
   }
 })();
 
-const pool = require('../db.js');
+var pool = require('../db.js');
 
 
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-// app.use('/api', apiRouter);
+// app.use('/api', apiRouter); // 
 
 
 
