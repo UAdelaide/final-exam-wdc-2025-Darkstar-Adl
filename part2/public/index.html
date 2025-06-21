@@ -61,7 +61,8 @@
           xhttp.open("POST", "/api/users/login", true);
           xhttp.setRequestHeader("Content-type", "application/json")
           xhttp.json({
-            username: this.username
+            username: this.username,
+            password: this.password
           })
 
         }
