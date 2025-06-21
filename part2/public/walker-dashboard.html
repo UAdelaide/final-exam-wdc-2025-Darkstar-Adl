@@ -106,18 +106,7 @@
           xhttp.onreadystatechange = function() {
           if (this.readyState == 4) {
             if (this.status == 200) {
-              var response = JSON.parse(this.responseText);
-
-              if (response.user.role == "owner") {
-                window.location.href = "/owner-dashboard.html";
-              } else if (response.user.role == "walker") {
-                window.location.href = "/walker-dashboard.html";
-              }
-              } else if (this.status == 401) {
-                this_vue.message_for_user = "Incorrect username or pasword, please try again";
-              } else if (this.status == 500) {
-                this_vue.message_for_user = "Invalid username or password, did you use a special character or a long string?";
-              }
+              
             }
           }
         }
