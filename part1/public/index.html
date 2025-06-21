@@ -22,7 +22,7 @@
             data: {
                 today_dog_url: "",
                 load_date: new Date(),
-                clicked_status = "has not been pressed"
+                clicked_status: "has not been pressed..."
             },
             methods: {
                 getDog: function() {
@@ -33,6 +33,7 @@
                     xhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
                             vueinst.today_dog_url = res.body.message;
+                            clicked_status: "has not been pressed..."
                         }
                     }
                 }
