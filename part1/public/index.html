@@ -46,7 +46,7 @@
                 getDog() {
                     app.clicked_status = "- *connecting to dog*"
                     async function fetchDog() {
-                        dog_url = fetch("https://dog.ceo/api/breeds/image/random")
+                        let dog_url = await fetch("https://dog.ceo/api/breeds/image/random")
                     }
 
                         app.today_dog_url = res.body.message;
