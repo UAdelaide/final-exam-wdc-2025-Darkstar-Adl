@@ -71,9 +71,9 @@
                 var response = JSON.parse(this.responseText);
 
                 if (response.user.role == "owner") {
-                  window.location.href = 
+                  window.location.href = "/owner-dashboard.html";
                 } else if (response.user.role == "walker") {
-
+                  window.location.href = "/owner-dashboard.html";
                 }
               }
             }
