@@ -46,11 +46,11 @@
             },
             methods: {
                 getDog() {
-                    app.clicked_status = "- *connecting to dog*"
+                    this.clicked_status = "- *connecting to dog*"
                     async function fetchDog() {
                         let dog_res = await fetch("https://dog.ceo/api/breeds/image/random");
-                        app.today_dog_url = await dog_res.body.message;
-                        app.clicked_status = "IS ACTIVATED!"
+                        this.today_dog_url = await dog_res.body.message;
+                        this.clicked_status = "IS ACTIVATED!"
                     }
                 }
             }
