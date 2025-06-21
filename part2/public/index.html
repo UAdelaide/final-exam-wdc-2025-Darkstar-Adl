@@ -63,10 +63,10 @@
           xhttp.withCredentials = true;
           xhttp.open("POST", "/api/users/login", true);
           xhttp.setRequestHeader("Content-type", "application/json")
-          xhttp.json({
+          xhttp.send(JSON.stringify({
             username: this.username,
             password: this.password
-          });
+          }));
 
           this.message_for_user = "Waiting for server to respond";
 
