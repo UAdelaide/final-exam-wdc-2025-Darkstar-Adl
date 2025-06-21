@@ -55,6 +55,8 @@ router.post('/login', async (req, res) => {
     }
     try {
       req.session.username = req.body.username;
+    } catch (error) {
+      console.log("[Login] Error successful");
     }
 
     console.log("[Login] Login successful");
