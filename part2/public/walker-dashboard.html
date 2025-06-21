@@ -95,14 +95,12 @@
         log_out() {
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
-          xhttp.open("POST", "/api/users/log", true);
+          xhttp.open("POST", "/api/users/logout", true);
           xhttp.setRequestHeader("Content-type", "application/json")
           xhttp.send(JSON.stringify({
-            username: this.username,
-            password: this.password
+            username: this.username
           }));
-
-          this.message_for_user = "Waiting for server to respond";
+          //password: this.password
 
           const this_vue = this;
           xhttp.onreadystatechange = function() {
