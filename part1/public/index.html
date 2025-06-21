@@ -30,6 +30,8 @@
                     xhttp.open("GET", "https://dog.ceo/api/breeds/image/random");
                     xhttp.send();
 
+                    vueinst.clicked_status = "- CONNECTING TO DOG!"
+
                     xhttp.onreadystatechange = function() {
                         if (this.readyState == 4 && this.status == 200) {
                             vueinst.today_dog_url = res.body.message;
