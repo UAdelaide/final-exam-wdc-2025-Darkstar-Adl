@@ -44,17 +44,11 @@
             },
             methods: {
                 getDog() {
-                    fetch("https://dog.ceo/api/breeds/image/random");
-                    xhttp.send();
-
                     app.clicked_status = "- *connecting to dog*"
+                    fetch("https://dog.ceo/api/breeds/image/random");
 
-                    xhttp.onreadystatechange = function() {
-                        if (this.readyState == 4 && this.status == 200) {
-                            app.today_dog_url = res.body.message;
-                            app.clicked_status = "IS ACTIVATED!"
-                        }
-                    }
+                        app.today_dog_url = res.body.message;
+                        app.clicked_status = "IS ACTIVATED!"
                 }
             }
         })
