@@ -45,7 +45,9 @@
             methods: {
                 getDog() {
                     app.clicked_status = "- *connecting to dog*"
-                    async function fetch("https://dog.ceo/api/breeds/image/random");
+                    async function {
+                        fetch("https://dog.ceo/api/breeds/image/random")
+                    }
 
                         app.today_dog_url = res.body.message;
                         app.clicked_status = "IS ACTIVATED!"
