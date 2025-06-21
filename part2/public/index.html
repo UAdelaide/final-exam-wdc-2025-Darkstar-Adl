@@ -80,12 +80,11 @@
               } else if (response.user.role == "walker") {
                 window.location.href = "/walker-dashboard.html";
               }
-            } else if (this.status == 401) {
-              this.message_for_user = "Incorrect username or pasword, please try again";
-            } else if (this.status == 500) {
-              this.message_for_user = "Invalid username or password, did you use a special character or a long string?";
-            }
-              this.message_for_user = "Recieved:" + this.status;
+            }   else if (this.status == 401) {
+                this.message_for_user = "Incorrect username or pasword, please try again";
+              } else if (this.status == 500) {
+                this.message_for_user = "Invalid username or password, did you use a special character or a long string?";
+              }
             }
           }
         }
