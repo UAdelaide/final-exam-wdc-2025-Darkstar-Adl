@@ -51,7 +51,7 @@ app.use(express.static(path.join(__dirname, 'public')));
   }
 })();
 
-var pool = require('/db.js');
+var pool = require('db.js');
 
 
 
