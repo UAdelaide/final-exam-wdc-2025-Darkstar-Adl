@@ -57,6 +57,8 @@
           this.username = document.getElementById("username").value;
           this.password = document.getElementById("password").value;
 
+          this.message_for_user = "Sending ";
+
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
           xhttp.open("POST", "/api/users/login", true);
