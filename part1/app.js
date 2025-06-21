@@ -51,6 +51,8 @@ app.use(express.static(path.join(__dirname, 'public')));
   }
 })();
 
+const pool = require('../db.js');
+
 
 
 app.use('/', indexRouter);
