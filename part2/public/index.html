@@ -59,7 +59,7 @@
           let xhttp = new XMLHttpRequest();
           xhttp.withCredentials = true;
           xhttp.open("POST", "/api/users/login", true);
-          
+          xhttp.setRequestHeader("Content-type", "application/json")
 
         }
       }
