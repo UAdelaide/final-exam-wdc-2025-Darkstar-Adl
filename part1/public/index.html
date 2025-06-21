@@ -49,8 +49,8 @@
                     async function fetchDog() {
                         let dog_res = await fetch("https://dog.ceo/api/breeds/image/random");
                         let dog_data = await dog_res.json();
-                        app.today_dog_url = await dog_data.message;
-                        app.clicked_status = "IS ACTIVATED!"
+                        this.today_dog_url = await dog_data.message;
+                        this.clicked_status = "IS ACTIVATED!"
                     }
                     fetchDog();
                 }
