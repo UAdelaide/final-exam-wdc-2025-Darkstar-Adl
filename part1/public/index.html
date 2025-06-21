@@ -44,7 +44,7 @@
             },
             methods: {
                 getDog() {
-                    xhttp.open("GET", "https://dog.ceo/api/breeds/image/random");
+                    fetch("https://dog.ceo/api/breeds/image/random");
                     xhttp.send();
 
                     app.clicked_status = "- *connecting to dog*"
