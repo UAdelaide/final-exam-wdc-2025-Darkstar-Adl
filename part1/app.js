@@ -58,7 +58,7 @@ var pool = require('../db.js');
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 // app.use('/api', apiRouter);
-// // I moved these routes to the API becasue taht fits the task desc
+// I moved the routes from the /api to here becasue taht fits the task desc
 // best, and these things can be picky sometimes
 
 
