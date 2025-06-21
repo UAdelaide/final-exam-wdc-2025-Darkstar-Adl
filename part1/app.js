@@ -81,7 +81,7 @@ Sample Response:
 ]
 */
 app.get('/api/dogs', async function(req, res, next) {
-  // These routes are in app.js beca
+  // These routes are in app.js because it fits the task desc best, 
   const [rows] = await pool.query(`
         SELECT d.name AS dog_name, d.size, u.username AS owner_username
         FROM Dogs AS d
